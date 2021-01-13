@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap"
+      rel="stylesheet">
+    <title>Billing system</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left" id="companies">
+        <h1 class="left__title">
+          Available payments
+        </h1>
+        <div class="left__company" data-id="taxes">
+          <img src="img/taxes.svg" class="taxes" data-id="taxes" />
+          <p class="left__company-desc" data-id="taxes">Taxes</p>
+        </div>
+        <div class="left__company" data-id="water">
+          <img src="img/water.svg" class="taxes" data-id="water" />
+          <p class="left__company-desc" data-id="water">Cold Water</p>
+        </div>
+        <div class="left__company" data-id="internet">
+          <img src="img/internet.svg" class="taxes" data-id="internet"/>
+          <p class="left__company-desc" data-id="internet">Internet</p>
+        </div>
+        <div class="left__company" data-id="security">
+          <img src="img/security.svg" class="taxes" data-id="security" />
+          <p class="left__company-desc" data-id="security">Security</p>
+        </div>
+        <div class="left__company" data-id="exchange">
+          <img src="img/exchange.svg" class="taxes" data-id="exchange" />
+          <p class="left__company-desc" data-id="exchange">Currency purchase</p>
+        </div>
+      </div>
+      <div class="center">
+       <!-- <h2 class="center__title">Cold Water</h2>
+        <p class="center__desc">Payment of cold water supply</p>-->
+        <p class="center__select-meters">
+          <label for="meters">
+            <span>Select Meter</span>
+            <select id="meters">
+              <option value="DS949321">DS949321</option>
+              <option value="QA522010">QA522010</option>
+              <option value="LK309123">LK309123</option>
+              <option value="GC123309">GC123309</option>
+              <option value="WE331209">WE331209</option>
+            </select>
+          </label>
+        </p>
+        <form class="center__form">
+          <div class="form__data">
+            <div class="data__wrapper">
+              <div class="data__item data__previous">
+                <label for="previous">
+                  <span>Previous</span>
+                  <input id="previous" name="previous" type="text" autocomplete="on"
+                    pattern="[0-9]{0,12}" />
+                </label>
+              </div>
+              <div class="data__item data__current">
+                <label for="current">
+                  <span>Current</span>
+                  <input id="current" name="current" type="text" autocomplete="off"
+                    pattern="[0-9]{0,12}" />
+                </label>
+              </div>
+              <div class="data__item data__payment">
+                <label for="payment">
+                  <span>Current on the payment date</span>
+                  <input id="payment" name="payment" type="text" autocomplete="off"
+                    pattern="[0-9]{0,12}" />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form__summary">
+            <p class="form__summary-title">For payment</p>
+            <ul class="form__summary-list">
+             <!-- <li class="list__item">
+                <p><span class="list__item-label">DS949321</span>
+                  <span class="price">$ <b>621</b></span>
+                </p>
+              </li>
+              <li class="list__item">
+                <p><span class="list__item-label">QA522010</span>
+                  <span class="price">$ <b>902</b></span>
+                </p>
+              </li>
+              <li class="list__item">
+                <p><span class="list__item-label">LK309123</span>
+                  <span class="price">$ <b>173</b></span>
+                </p>
+              </li>
+              <li class="list__item list__total">
+                <p><span class="list__item-label">Total</span>
+                  <span class="price">$ <b>1 696</b></span>
+                </p>
+              </li>-->
+            </ul>
+          </div>
+          <div class="form__footer">
+            <div class="button-wrapper">
+              <button id="btn-reset-payments" class="btn-outline" type="reset">Clear</button>
+              <button id="btn-save-payment" class="btn" type="submit">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="right">
+        <h2 class="right__title">Saved Payments</h2>
+        <form class="right__payments">
+          <div class="right__payments-fields" id="payments">
+            <!--<p class="right__payments-field">
+              <label>
+                <input name="taxes" type="checkbox" />
+                <span>Налоги</span>
+              </label>
+            </p>
+            <p class="right__payments-field">
+              <label>
+                <input name="water" type="checkbox" />
+                <span>Холодная вода</span>
+              </label>
+            </p>
+            <p class="right__payments-field">
+              <label>
+                <input name="internet" type="checkbox" />
+                <span>Интернет</span>
+              </label>
+            </p>
+            <p class="right__payments-field">
+              <label>
+                <input name="security" type="checkbox" />
+                <span>Охрана</span>
+              </label>
+            </p>
+            <p class="right__payments-field">
+              <label>
+                <input name="exchange" type="checkbox" />
+                <span>Обмен валют</span>
+              </label>
+            </p>-->
+          </div>
+          <div class="right__payments-footer">
+            <button id="btn-pay" class="btn" type="submit">Pay</button>
+          </div>
+        </form>
+        <div class="right__transactions">
+          <p class="transactions__title">Transactions</p>
+          <ul class="transactions__list">
+            <!-- <li class="list__item">Taxes: Successful payment</li>
+                <li class="list__item list__item-error">Security: Transactions error</li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
